@@ -1,10 +1,16 @@
 import React from 'react'
 
-import { ExampleComponent } from 'cc-custom-button'
+import { Button } from 'cc-custom-button'
 import 'cc-custom-button/dist/index.css'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return (
+    <div className='container'>
+      <Button label='Primary Button' className='btn-primary' />
+      <Button label='Secondary Button' className='btn-secondary' />
+      <Button label='Success Button' className='btn-success' />
+    </div>
+  )
 }
 
 export default App
