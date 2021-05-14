@@ -1,12 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styles from './button.module.scss'
+import './button.module.css'
 
 export function Button(props) {
   const { className, disabled, label, type } = props
   return (
     <button
-      className={`${styles.btn} ${styles[className]}`}
+      className={`btn ${className}`}
       type={type === 'submit' ? 'submit' : 'submit'}
       disabled={disabled}
     >
@@ -23,7 +23,7 @@ Button.propTypes = {
 }
 
 Button.defaultProps = {
-  className: styles.btn,
+  className: 'btn',
   disabled: false,
   type: 'button'
 }
