@@ -1,12 +1,13 @@
+/* eslint-disable no-unused-vars */
 import React from 'react'
 import PropTypes from 'prop-types'
-import './button.module.css'
+import styles from './button.module.css'
 
 export function Button(props) {
   const { className, disabled, label, type } = props
   return (
     <button
-      className={`btn ${className}`}
+      className={`${styles.btn} ${styles[className]}`}
       type={type === 'submit' ? 'submit' : 'submit'}
       disabled={disabled}
     >
@@ -23,7 +24,7 @@ Button.propTypes = {
 }
 
 Button.defaultProps = {
-  className: 'btn',
+  className: styles.btn,
   disabled: false,
   type: 'button'
 }
